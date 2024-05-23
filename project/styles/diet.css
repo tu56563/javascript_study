@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+}
+main {
+    width: 600px; margin: 20px auto; 
+    height: 500px;
+    text-align: center;
+    background-color: silver;
+    border-radius: 20px;
+}
+main h1,
+main p,
+main ul {
+    color: #fff;
+}
+main h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 50px;
+}
+main p {
+    margin: 10px 0 30px;
+}
+main ul {}
+main ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main ul li:nth-child(2) {
+    margin: 20px 0;
+}
+main ul li input {
+    margin-left: 20px;
+    width: 400px; height: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+}
+main ul p {
+    
+}
+main p button {
+    width: 360px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #09e;
+    color: #fff;
+    border: 0;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 23px;
+}
