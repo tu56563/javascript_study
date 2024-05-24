@@ -3,20 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이재상</title>
+    <title>이재상 | 프로젝트모음</title>
+    <link rel="stylesheet" href="./styles/reset.css">
     <style>
-        main {
-            display: flex;
-            flex-flow: column nowrap;
+        .bg {
+            height: 400px; background-color: #A9E0FF;
+            padding-top: 123px;
+            text-align: center;
         }
-        main a {padding: 10px;}
-        main a:hover {color: blue;}
+        .bg .lang {
+            font-size: 1.875rem;
+            line-height: 1.5;
+        }
+        .bg h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 1.5;
+        }
+        .bg .date {}
+        .list {
+            padding: 10px;
+            width: 630px; margin: 20px auto 0;
+            display: flex; flex-flow: row wrap;
+        }
+        .list a {
+            width: calc((100% - 10px) / 2); border-bottom: 1px solid #000;
+            text-align: center; padding: 16px 12px;
+        }
+        .list a:hover {
+            color: blue;
+        }
+        .list a:nth-child(odd) {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
-    <main>
-        <a href="./dom_data.html">DOM 데이터 출력연습</a>
-        <a href="./project/diet.html">다이어트 계산기 과제</a>
-    </main>
+    <div class="bg">
+        <p class="lang">JAVASCRIPT</p>
+        <h1>이재상 프로젝트</h1>
+        <p class="date">24.03.19 ~ 24.08.02</p>
+    </div>
+    <div class="list">
+        <a href="./dom_data.html" target="_blank">DOM 데이터 출력연습</a>
+        <a href="./project/diet.html" target="_blank">다이어트 계산기 과제</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+    </div>
 </body>
 </html>
