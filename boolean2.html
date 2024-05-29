@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script/boolean2.js" defer></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .info {
+            width: 500px; height: 750px;
+            margin: 0 auto;
+            background-image: url(https://images.unsplash.com/photo-1576857990591-aad2585f34d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D);
+        }
+        .info p {}
+        .info p input[type=text] {
+            border: 1px solid black;
+            width: 300px; height: 50px;
+            border-radius: 20px;
+        }
+        .info p input:nth-child(2)[type=text] {
+            margin: 20px 0;
+        }
+        .info p input[type=button] {}
+        .info .result {}
+    </style>
+</head>
+<body>
+    <div class="info">
+        <p>
+            <input type="text" id="year">년
+            <input type="text" id="month">월
+            <input type="text" id="day">일
+        </p>
+        <p>
+            <button type="button" id="btn">탄생화와 꽃말은?</button>
+        </p>
+        <p class="result"></p>
+    </div>
+</body>
+</html>
