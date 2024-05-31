@@ -1,0 +1,29 @@
+body,html {scroll-behavior: smooth;}
+main .bg {width: 100%; height: 100vh; background-size: cover;}
+main .bg:nth-child(1) {background-image: url(https://external-preview.redd.it/ZmfL6wAHRuKHxavYEkx_PANlxfNFDQiFnLPpSOaruYk.png?width=1080&crop=smart&auto=webp&s=688b19545963b9709a26953222546b733715a551);}
+main .bg:nth-child(2) {background-image: url(https://wallpapercg.com/media/ts_orig/20891.webp);}
+main .bg:nth-child(3) {background-image: url(https://mrwallpaper.com/images/high/liverpool-4k-logo-fiery-design-8cbss5i4tejefcln.webp);}
+main .bg:nth-child(4) {background-image: url(https://e1.pxfuel.com/desktop-wallpaper/998/649/desktop-wallpaper-tottenham-hotspur-tottenham-logo.jpg);}
+nav {
+    display: flex; flex-flow: column nowrap;
+    position: fixed; right: 50px; bottom: 200px;
+}
+nav a {
+    width: 30px; height: 30px; position: absolute; right: 0;
+    background: #222; border-radius: 50%;
+    transition: all 0.5s; overflow: hidden;
+}
+nav a:nth-child(1) {top: 0;}
+nav a:nth-child(2) {top: 35px;}
+nav a:nth-child(3) {top: 70px;}
+nav a:nth-child(4) {top: 105px;}
+nav a:hover {width: 100px; border-radius: 10px;}
+nav a:after {
+    display: inline-block; position:absolute; right: 0px;
+    color: #fff; padding: 10px; line-height: 8px;
+    white-space: nowrap;  
+}
+nav a:nth-child(1):hover::after {content:'Man City'}
+nav a:nth-child(2):hover::after {content:'Arsenal'}
+nav a:nth-child(3):hover::after {content:'Liverpool'}
+nav a:nth-child(4):hover::after {content:'Tottenham'}
