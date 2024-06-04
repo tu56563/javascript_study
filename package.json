@@ -1,0 +1,15 @@
+{
+  "name": "casper",
+  "version": "1.0.0",
+  "description": "캐스퍼 작업 중간 파일 (결석자용)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.77.4"
+  }
+}

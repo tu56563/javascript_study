@@ -1,0 +1,148 @@
+@import 'common';
+// common.scss 변수 및 mixin 이용해서 중첩 선택자 규칙으로 디자인만들기
+header {
+    height: 70px; background: $bg_white;
+    @include pst_fixed; width: $w100;
+    @include flex-r; padding: 0 $p15;
+    h1 {a {img {}}}
+    > nav {
+        .sub_bg {
+            background-color: $bg_white;
+            height: 220px; @include pst_absol; top: 70px;
+        }
+        .gnb {
+            display: flex;
+            > li:last-child {margin: 0;}
+            > li {
+                margin-right: $m-r100; position: relative;
+                a {}
+                .sub {@include pst_absol; top: 50px;
+                    li {
+                        a {
+                            font-size:$font091;
+                            display:block; white-space:nowrap;
+                            line-height:$l-h30;
+                            img {width: 170px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .lnb {display: flex;
+        .m_nav {display: none;
+            .all_nav {
+                display: block; width: 24px; height: 24px;
+                img {width: 100%;}
+            }
+            // 모바일 전용 내비게이션(m_nav 자식 nav)
+            nav { display: none; /* 초기 숨기기(이후 JS처리) */
+                z-index: 900;
+                position: absolute; right: 0; top: 70px;
+                background-color: $bg_white;
+                width: 300px; height: calc(100vh - 70px);
+                .sub_bg {}
+                .gnb {
+                    > li {
+                        > a {
+                            display: block;
+                            border-bottom: 1px solid $main-color;
+                            margin: 0 10px;
+                            line-height: 40px;
+                        }
+                        > .sub { 
+                            li {
+                                a {
+                                    display: block;
+                                    border-bottom: 1px dashed #ddd;
+                                    margin: 0 25px; line-height: 30px;
+                                    img {width: 70%;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .my_menu {}
+        .notice {background-position-x: right;}
+        > a {
+            background-image:url(../images/ico_header.png);
+            width:20px; height:25px;
+            margin-left:12px;
+            span {display: none;}
+        }
+    }
+}
+// ---------------------main
+main {margin-top: 70px;
+    .visual {
+        @include pst_visual;
+        .txt {
+            text-align: center; padding-top: $pt50; color: $bg_white;
+            h1 {
+                font-size: $font5; font-weight: $fw800;
+            }
+            p {
+                margin: 20px 0; font-size: $font12;
+            }
+            .link {
+                a {
+                    display: inline-block; padding: 10px 20px;
+                    background-color: $main-color; color: $bg_white;
+                }
+            }
+        }
+        .scroll {
+            text-align: center;
+            @include pst_absol; bottom: 50px;
+            @include scr_ani;
+            img {width:50px; filter:invert(1)}
+        }
+    }//visual end
+    .advantage {
+                @include flex-r;
+                @include layout_p;
+        .title { width: 500px; align-self: flex-start;
+            h1 {
+                @include title_level_1;
+                em {
+                    font-weight: 700;
+                }
+            }
+            p {
+                @include title_level_2;
+            }
+        }
+        .contents { display: flex; width: calc(100% - 500px);
+                    overflow-x: auto; padding-bottom: 25px;
+                    overflow-y: hidden;
+            a { margin-right: 30px;
+                .photo {
+                    img{}
+                }
+                .photo+p {
+                    margin-bottom: 6px;
+                }
+                h2 {
+                    @include title_level_2; color: $main-color;
+                    em{
+                        background: $main-color; color: #fff;
+                        font-size: 0.91rem; padding: 5px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }//advantage end
+    .design {@include layout_p; position: relative;
+        h1 {
+            @include pst_absol; text-align: center; top: 0;
+            z-index: -1;
+            font-size: 15rem; font-weight: 900; color: #ddd;
+        }
+        .photo {text-align: center;
+            img {}
+        }
+    }//design end
+}//main end

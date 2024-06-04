@@ -1,0 +1,31 @@
+// $변수, @mixin 스타일 규칙 모음
+// 1. 원본(style.css) 파일 중 반복되는 속성 값을 변수로 만들기
+// 2. (위) 기준 반복되는 스타일 규칙 2개 이상을 mixin 만들기
+$bg_white:#fff;
+$main-color:#002c5f;
+$p15:15px;
+$m-r100:100px;
+$w100:100%;
+$font091:0.91rem;
+$l-h30:30px;
+$pt50:50px;
+$font5:5rem;
+$fw800:800;
+$font12:1.2rem;
+@mixin flex-r {
+    display:flex; justify-content: space-between;
+    align-items:center; flex-flow: row nowrap;
+}
+@mixin pst_fixed {position:fixed; left:0; top:0; z-index: 999;}
+@mixin pst_absol {position:absolute; width:100%; left:0;}
+@mixin pst_visual {
+    position:relative;
+    background-image:url(../images/visual.png);
+    background-position:center;
+    background-size:cover;
+    height:calc(100vh - 70px); /*header(70px)높이를 뺀 만큼의 뷰포트크기*/
+}
+@mixin scr_ani {animation:move 1s alternate ease infinite;}
+@mixin layout_p {padding: 100px 15px;}
+@mixin title_level_1 {font-size: 2.5rem; line-height: 1.2;}
+@mixin title_level_2 {color: #888; font-size: 1.3rem; line-height: 1.3;}
